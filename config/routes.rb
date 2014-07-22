@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Rich::Engine => '/rich', :as => 'rich'
   resources :posts
 
   root 'posts#index'

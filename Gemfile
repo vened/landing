@@ -6,6 +6,11 @@ gem 'rails', '4.1.1'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'haml-rails'
+
+# gem 'rich'
+gem 'rich', :git => 'https://github.com/bastiaanterhorst/rich.git'
+gem 'paperclip'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
