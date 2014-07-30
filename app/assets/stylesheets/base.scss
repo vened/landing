@@ -10,6 +10,7 @@ body{
 .glyphicon{
   color: #945fba;
 }
+
 //header
 .header{
   margin-bottom: 30px;
@@ -30,30 +31,31 @@ body{
       color: #945fba;
     }
   }
-  
+
   .glyphicon{
     margin-right: 5px;
   }
-  
+
   .contact{
     margin-right: 30px;
     padding-top: 30px;
     font-size: 18px;
     text-shadow: 1px 1px 0 #fff;
-    
+
     a{
       color: #333;
     }
-    
+
     .phone{
       font-size: 24px;
     }
   }
-  
+
   .zvonok{
     padding-top: 49px;
   }
 }
+//end header
 
 //menu
 .navbar{
@@ -176,3 +178,24 @@ body{
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
+//end menu
+
+//promo
+.promo{
+  position: relative;
+  margin-top: -9px;
+  
+  .glyphicon{
+    color: #fff;
+  }
+}
+
+.carousel-control.right{
+  background-image: linear-gradient(to right, rgba(72, 32, 154, 0) 0%, rgba(72, 32, 154, 1) 100%);
+  background-repeat: repeat-x;
+}
+.carousel-control.left{
+  background-image: linear-gradient(to right, rgba(72, 32, 154, 0.80) 0%, rgba(72, 32, 154, 0) 100%);
+  background-repeat: repeat-x;
+}
+//end promo
