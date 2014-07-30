@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
   <title>Landing</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="header container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>
+        Виталий Смаль
+        <br>
+        <small>Профессиональный ведущий на праздник</small>
+      </h1>
+    </div>
+    <div class="col-lg-3 text-right contact">
+      <div>Санкт-Петербург</div>
+      <div>
+        <i class="glyphicon glyphicon-phone-alt"></i>
+        <span class="phone">+7(981)12-55-707</span>
+      </div>
+      <div>
+        <i class="glyphicon glyphicon-envelope"></i>
+        <a href="mailto:smal@gmail.com">
+          smal@gmail.com
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-3 text-right zvonok">
+       <span class="btn btn-info btn-lg">Закажите звонок</span> 
+    </div>
+  </div>
+</div>
+<div id="main-nav" class="navbar navbar-default container">
+  <div class="offset-help">
+    <div class="toggle-cont text-center">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul id="menu" class="nav navbar-nav text-center">
+        <li class="active"><a href="http://condorthemes.com/cartuline/index.html">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Pages</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--<%= yield %>-->
 </body>
 </html>

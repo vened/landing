@@ -60,6 +60,8 @@ GEM
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -83,6 +85,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.1)
+    font-awesome-rails (4.1.0.0)
+      railties (>= 3.2, < 5.0)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
     haml (4.0.5)
@@ -197,7 +201,9 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  bootstrap-sass
   devise
+  font-awesome-rails (~> 4.1.0.0)
   haml-rails
   jbuilder (~> 2.0)
   paperclip
