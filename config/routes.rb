@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+
   mount Rich::Engine => '/rich', :as => 'rich'
-  resources :posts
+  # resources :posts
+  # resources :orders
 
-  root 'posts#index'
+  root 'pages#index'
 
+  get 'order' => 'pages#order'
+  post 'order' => 'pages#order'
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

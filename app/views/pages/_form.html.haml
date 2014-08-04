@@ -1,0 +1,11 @@
+= form_tag({controller: "pages", action: "order"}, method: "post", class: "form-horizontal") do
+  .form-group
+    .col-sm-12
+      = text_field(:order, :name, :class=> "form-control", :placeholder=>"Ваше имя")
+  .form-group
+    .col-sm-12
+      = telephone_field(:order, :phone, :class=> "form-control", :placeholder=>"Номер телефона")
+  .form-group
+    .col-sm-12
+      = text_field(:order, :date, :class=> "form-control", :placeholder=>"Дата")
+  %button.btn.btn-info.btn-lg{:type => "submit"} Отправить заявку

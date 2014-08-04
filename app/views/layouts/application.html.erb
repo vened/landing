@@ -11,7 +11,7 @@
   <%= javascript_include_tag 'application.js' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="landing">
 <div class="header container">
   <div class="row">
     <div class="col-lg-6">
@@ -107,6 +107,26 @@
 </div>
 
 
-<!--<%= yield %>-->
+<div class="container">
+  <div class="row bg-primary form-promo" ng-controller="orderNewCtrl">
+    <div class="col-sm-6">
+      <h2>Оставьте заявку</h2>
+      <p>
+        на проведение программы ведущего Виталия Смаль с DJ и оборудованием на Ваше торжество
+      </p>
+      <p>
+        <i class="glyphicon glyphicon-time"></i>
+        Мы перезвоним в течение 10 минут
+      </p>
+    </div>
+    <div class="col-sm-5 col-sm-push-1">
+      <%= render 'pages/form' %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
+
 </body>
 </html>

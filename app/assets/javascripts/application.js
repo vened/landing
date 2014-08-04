@@ -4,3 +4,11 @@
 //= require jquery
 //= require bootstrap
 // require jquery_ujs
+
+jQuery(document).ready(function ()
+{
+	setTimeout(function ()
+	{
+		$(".alert").alert('close')
+	}, 1800);
+});

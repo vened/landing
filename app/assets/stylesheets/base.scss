@@ -6,6 +6,7 @@ body{
 
 .container{
   width: 960px;
+  margin-bottom: 40px;
 }
 .glyphicon{
   color: #945fba;
@@ -184,7 +185,7 @@ body{
 .promo{
   position: relative;
   margin-top: -9px;
-  
+
   .glyphicon{
     color: #fff;
   }
@@ -199,3 +200,41 @@ body{
   background-repeat: repeat-x;
 }
 //end promo
+
+//form
+.row{
+  &.bg-primary{
+    padding: 30px 50px;
+  }
+}
+.form-promo{
+  h2{
+    margin: 10px 0 20px;
+    font-size: 35px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .glyphicon{
+    color: #fff;
+  }
+}
+//end form
+
+
+//alert
+.alert{
+  position: absolute;
+  top:40%;
+  left: 50%;
+  width: 730px;
+  margin-left: -365px;
+  padding: 35px 20px;
+  text-align: center;
+  
+  h2{
+    margin-top: 0;
+  }
+}
+//end alert
+

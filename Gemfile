@@ -14,6 +14,7 @@ gem 'paperclip'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
+gem 'angularjs-rails', '~> 1.2.16'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails', '~> 4.1.0.0'
