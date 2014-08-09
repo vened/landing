@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :carousels
+
   mount Rich::Engine => '/rich', :as => 'rich'
   # resources :posts
   # resources :orders

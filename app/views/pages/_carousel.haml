@@ -1,0 +1,33 @@
+.promo
+  #carousel-example-generic.carousel.slide{:data => {:ride => "carousel"}}
+    
+    %ol.carousel-indicators
+      -@id = 0
+      -@carousels.each do |item|
+        -if @id === 0
+          %li.active{:data => {:target => "#carousel-example-generic", :slide => {:to => "#{@id}"}}}
+        -else
+          %li{:data => {:target => "#carousel-example-generic", :slide => {:to => "#{@id}"}}}
+        -@id = @id + 1
+    
+    .carousel-inner
+      -@id2 = 0
+      -@carousels.each do |item|
+        -if @id2 === 0
+          .item.active
+            %img.img-responsive{:src => "#{item.images}", :alt => "#{item.title}"}
+            .carousel-caption
+              %h3= item.title
+              %p= item.body
+        -else
+          .item
+            %img.img-responsive{:src => "#{item.images}", :alt => "#{item.title}"}
+            .carousel-caption
+              %h3= item.title
+              %p= item.body
+        -@id2 = @id2 + 1
+
+    %a.left.carousel-control{:href => "#carousel-example-generic", :role => "button", :data => {:slide => "prev"}}
+      %span.glyphicon.glyphicon-chevron-left
+    %a.right.carousel-control{:href => "#carousel-example-generic", :role => "button", :data => {:slide => "next"}}
+      %span.glyphicon.glyphicon-chevron-right

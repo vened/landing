@@ -6,6 +6,7 @@ gem 'rails', '4.1.1'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'haml-rails'
+gem 'rails-i18n'
 
 # gem 'rich'
 gem 'rich', :git => 'https://github.com/bastiaanterhorst/rich.git'

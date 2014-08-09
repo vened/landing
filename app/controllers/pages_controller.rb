@@ -7,6 +7,8 @@ class PagesController < ApplicationController
   def index
     @posts = Post.all
     @order = Order.new
+    
+    @carousels = Carousel.all
   end
 
   def order
