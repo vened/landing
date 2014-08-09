@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   def order
     @order = Order.new(order_params)
     if @order.save
-      # render :json => @order
+      render :json => @order
     else
       render :json => @order.errors
     end
