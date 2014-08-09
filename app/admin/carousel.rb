@@ -1,9 +1,5 @@
 ActiveAdmin.register Carousel do
 
-
-  # See permitted parameters documentation:
-  # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
   permit_params :title, :body, :images
   menu :label => "Карусель изображений"
   config.filters = false
@@ -31,13 +27,13 @@ ActiveAdmin.register Carousel do
     actions
   end
 
+  
   show do
-    panel "#{carousel.title}" do
-      div do
-        simple_format carousel.body
-      end
-      div do
-        simple_format image_tag carousel.images, {:style => "width:220px"}
+    attributes_table do
+      row :title
+      row :body
+      row :images do
+        image_tag carousel.images, {:style => "width:500px"}
       end
     end
   end

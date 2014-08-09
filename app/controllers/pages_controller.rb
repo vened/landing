@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @order = Order.new
     
     @carousels = Carousel.all
+    @galleries = Gallery.all
   end
 
   def order
