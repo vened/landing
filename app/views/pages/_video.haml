@@ -1,0 +1,6 @@
+%h2.text-center.custom-title#video
+  %span Видео с мероприятий
+.row.video
+  -@videos.each do |v|
+    .col-sm-6
+      = raw v.src

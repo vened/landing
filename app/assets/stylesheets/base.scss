@@ -76,6 +76,12 @@ body{
     }
 }
 
+.video{
+    iframe{
+        width: 100% !important;
+    }
+}
+
 //alert
 .alert{
     position: absolute;
