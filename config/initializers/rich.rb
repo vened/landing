@@ -28,7 +28,7 @@ if Object.const_defined?("Rich")
     # remember to re-generate your styles by running:
     #   rake rich:refresh_assets
     config.image_styles = {
-        :thumb => "100x100#",
+        :thumb => "240x150#",
         :carousel => "960x600#"
     }
 
