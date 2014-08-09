@@ -53,6 +53,7 @@
         <li><a href="#about">Принципы работы</a></li>
         <li><a href="#gallery">Фото</a></li>
         <li><a href="#video">Видео</a></li>
+        <li><a href="#review">Отзывы</a></li>
         <li><a href="#order">Оставить заявку</a></li>
       </ul>
     </div>
@@ -85,6 +86,25 @@
   <%= render 'pages/about' %>
   <%= render 'pages/gallery' %>
   <%= render 'pages/video' %>
+  <%= render 'pages/review' %>
+  <div class="row form-promo" id="order" ng-controller="orderNewCtrl">
+    <div class="col-sm-6">
+
+      <h2 class="text-center custom-title">
+        <span>Оставьте заявку</span>
+      </h2>
+      <p>
+        на проведение программы ведущего Виталия Смаль с DJ и оборудованием на Ваше торжество
+      </p>
+      <p>
+        <i class="glyphicon glyphicon-time"></i>
+        Мы перезвоним в течение 10 минут
+      </p>
+    </div>
+    <div class="col-sm-5 col-sm-push-1">
+      <%= render 'pages/form' %>
+    </div>
+  </div>
 
   <div>
     <%= yield %>

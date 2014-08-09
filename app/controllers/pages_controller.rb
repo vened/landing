@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     @carousels = Carousel.all
     @galleries = Gallery.all
     @videos = Video.all
+    @reviews = Review.all
   end
 
   def order

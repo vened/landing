@@ -1,0 +1,13 @@
+.row.bg-primary#review
+  %h2.text-center.custom-title
+    %span Отзывы
+  .row
+    -@it = 0
+    -@reviews.each do |item|
+      .col-sm-4.text-justify
+        =image_tag item.image.url(:thumb), :class => "img-circle img-responsive"
+        %h3.text-center= item.title
+        %p= item.body
+        -@it = @it + 1
+      -if @it == 3 || @it == 6 || @it == 9 || @it == 12
+        .clearfix

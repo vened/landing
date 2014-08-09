@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :reviews
+
   resources :videos
 
   mount Rich::Engine => '/rich', :as => 'rich'
