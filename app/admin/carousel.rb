@@ -1,7 +1,7 @@
 ActiveAdmin.register Carousel do
 
   permit_params :title, :body, :images
-  menu :label => "Карусель изображений"
+  menu :label => "Карусель"
   config.filters = false
 
   form do |f|

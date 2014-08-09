@@ -41,6 +41,40 @@ body{
     }
 }
 
+.custom-title{
+    color: $pure-color;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 500;
+    text-shadow: 1px 1px 0 $alert-success-border;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    span{
+        position: relative;
+        display: inline-block;
+
+        &:after{
+            content: '';
+            position: absolute;
+            left: -70px;
+            top: 10px;
+            width: 35px;
+            height: 27px;
+            background: url(ornament-t-left.png);
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            right: -70px;
+            top: 10px;
+            width: 35px;
+            height: 27px;
+            background: url(ornament-t-right.png);
+        }
+    }
+}
 
 //alert
 .alert{

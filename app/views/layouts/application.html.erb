@@ -60,11 +60,14 @@
 
 <div class="container wrapper">
 
-  <%= render 'carousel' %> 
+  <%= render 'pages/carousel' %> 
 
   <div class="row bg-primary form-promo" id="order" ng-controller="orderNewCtrl">
     <div class="col-sm-6">
-      <h2>Оставьте заявку</h2>
+      
+      <h2 class="text-center custom-title">
+        <span>Оставьте заявку</span>
+      </h2>
       <p>
         на проведение программы ведущего Виталия Смаль с DJ и оборудованием на Ваше торжество
       </p>
@@ -78,7 +81,8 @@
     </div>
   </div>
 
-  <%= render 'gallery' %>
+  <%= render 'pages/gallery' %>
+  <%= render 'pages/about' %>
 
   <div>
     <%= yield %>
@@ -87,7 +91,7 @@
 </div>
 
 
-<%= render 'overlay' %>
+<%= render 'pages/overlay' %>
 
 </body>
 </html>
