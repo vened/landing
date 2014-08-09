@@ -1,0 +1,9 @@
+<div class="row">
+  <%- @galleries.each do |item| %>
+      <div class="col-sm-3">
+        <a href="<%= item.image.url(:medium) %>" title="<%= item.title %>" data-gallery class="thumbnail img-responsive">
+          <img src="<%= item.image.url(:thumb) %>" alt="<%= item.title %>">
+        </a>
+      </div>
+  <%- end %>
+</div>

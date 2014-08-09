@@ -16,7 +16,7 @@ ActiveAdmin.register Gallery do
   index do
     selectable_column
     column "Изображение" do |item|
-      image_tag(item.image.url(:medium))
+      image_tag(item.image.url(:thumb))
     end
     actions
   end
@@ -28,5 +28,16 @@ ActiveAdmin.register Gallery do
       end
     end
   end
+
+
+  controller do
+    def create
+      create! do |format|
+        parameters = Rack::Utils.parse_query URI(request.referrer).query
+        format.html { redirect_to '/admin/galleries/' }
+      end
+    end
+  end
+  
 
 end
