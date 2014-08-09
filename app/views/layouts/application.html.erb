@@ -12,7 +12,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="landing">
-<div class="header container">
+<div class="header container" id="home">
   <div class="row">
     <div class="col-lg-6">
       <h1>
@@ -41,6 +41,7 @@
     </div>
   </div>
 </div>
+
 <div id="main-nav" class="navbar navbar-default container">
   <div class="offset-help">
     <div class="toggle-cont text-center">
@@ -49,66 +50,65 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul id="menu" class="nav navbar-nav text-center">
-        <li class="active"><a href="http://condorthemes.com/cartuline/index.html">Home</a></li>
+        <li class="active"><a href="#home">Главная</a></li>
         <li><a href="#">Features</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Pages</a></li>
+        <li><a href="#order">Оставить заявку</a></li>
       </ul>
     </div>
   </div>
 </div>
-<div class="promo container">
 
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
+<div class="container wrapper">
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img class="img-responsive" src="/assets/decor/1.jpg" alt=""/>
+  <div class="promo">
 
-        <div class="carousel-caption">
-          <h3>Режиссер театрализованных представлений и праздников</h3>
-          <p>Режиссер театрализованных представлений и праздников</p>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img class="img-responsive" src="/assets/decor/1.jpg" alt=""/>
+
+          <div class="carousel-caption">
+            <h3>Режиссер театрализованных представлений и праздников</h3>
+            <p>Режиссер театрализованных представлений и праздников</p>
+          </div>
+        </div>
+        <div class="item">
+          <img class="img-responsive" src="/assets/decor/2.jpg" alt=""/>
+
+          <div class="carousel-caption">
+            <h3>Режиссер театрализованных представлений и праздников</h3>
+            <p>Режиссер театрализованных представлений и праздников</p>
+          </div>
+        </div>
+        <div class="item">
+          <img class="img-responsive" src="/assets/decor/3.jpg" alt=""/>
+
+          <div class="carousel-caption">
+            <h3>Режиссер театрализованных представлений и праздников</h3>
+            <p>Режиссер театрализованных представлений и праздников</p>
+          </div>
         </div>
       </div>
-      <div class="item">
-        <img class="img-responsive" src="/assets/decor/2.jpg" alt=""/>
 
-        <div class="carousel-caption">
-          <h3>Режиссер театрализованных представлений и праздников</h3>
-          <p>Режиссер театрализованных представлений и праздников</p>
-        </div>
-      </div>
-      <div class="item">
-        <img class="img-responsive" src="/assets/decor/3.jpg" alt=""/>
-
-        <div class="carousel-caption">
-          <h3>Режиссер театрализованных представлений и праздников</h3>
-          <p>Режиссер театрализованных представлений и праздников</p>
-        </div>
-      </div>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
   </div>
-</div>
 
-
-<div class="container">
-  <div class="row bg-primary form-promo" ng-controller="orderNewCtrl">
+  <div class="row bg-primary form-promo" id="order" ng-controller="orderNewCtrl">
     <div class="col-sm-6">
       <h2>Оставьте заявку</h2>
       <p>
@@ -123,10 +123,12 @@
       <%= render 'pages/form' %>
     </div>
   </div>
+  <div>
+    <%= yield %>
+  </div>
+
 </div>
-<div class="container">
-  <%= yield %>
-</div>
+
 
 </body>
 </html>

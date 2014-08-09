@@ -1,0 +1,43 @@
+.header{
+    margin-bottom: 30px;
+
+    h1{
+        color: #945fba;
+        font-family: 'Lobster', cursive;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 500;
+        margin-left: 0;
+        text-shadow: 1px 1px 0 #fff;
+        margin-top: 30px;
+        margin-bottom: 0;
+
+        small{
+            font-size: 24px;
+            color: #945fba;
+        }
+    }
+
+    .glyphicon{
+        margin-right: 5px;
+    }
+
+    .contact{
+        margin-right: 30px;
+        padding-top: 30px;
+        font-size: 18px;
+        text-shadow: 1px 1px 0 #fff;
+
+        a{
+            color: #333;
+        }
+
+        .phone{
+            font-size: 24px;
+        }
+    }
+
+    .zvonok{
+        padding-top: 49px;
+    }
+}
