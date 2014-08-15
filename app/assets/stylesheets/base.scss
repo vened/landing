@@ -6,7 +6,7 @@
 @import "gallery";
 
 body{
-    background: url('head-bg.png') repeat-x 0 0, url('bg1.png');
+    background: image-url('head-bg.png') repeat-x 0 0, image-url('bg1.png');
     color: #555;
 }
 
@@ -81,7 +81,7 @@ body{
             top: 10px;
             width: 35px;
             height: 27px;
-            background: url(ornament-t-left.png);
+            background: image-url("ornament-t-left.png");
         }
         &:before{
             content: '';
@@ -90,7 +90,7 @@ body{
             top: 10px;
             width: 35px;
             height: 27px;
-            background: url(ornament-t-right.png);
+            background: image-url("ornament-t-right.png");
         }
     }
 }

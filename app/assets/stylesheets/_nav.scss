@@ -67,7 +67,7 @@
     padding: 0;
 }
 #menu{
-    background: url("menu-bg2.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: image-url("menu-bg2.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 70px;
     padding: 6px;
     border: 0px solid #000;
@@ -75,7 +75,7 @@
     position: relative;
 }
 #menu:before{
-    background: url("menu-left-corner.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: image-url("menu-left-corner.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     content: " ";
     height: 86px;
     left: -72px;
@@ -90,7 +90,7 @@
     }
 }
 #menu:after{
-    background: url("menu-right-corner.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: image-url("menu-right-corner.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     content: " ";
     height: 78px;
     right: -72px;
