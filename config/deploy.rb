@@ -2,7 +2,6 @@
 require "rvm/capistrano"
 require "bundler/capistrano"
 
-
 set :application, "landing"
 set :shared_children, shared_children
 set :repository, "git@github.com:vened/landing.git"
