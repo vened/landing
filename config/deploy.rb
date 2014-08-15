@@ -1,6 +1,7 @@
 require "rvm/capistrano"
 require "bundler/capistrano"
 
+before 'deploy:setup', 'rvm:install_rvm'
 set :application, "landing"
 set :shared_children, shared_children
 set :repository, "git@github.com:vened/landing.git"
@@ -9,7 +10,7 @@ set :scm, :git
 set :branch, "master"
 set :user, "max"
 set :group, "staff"
-set :use_sudo, false
+set :use_sudo, true
 set :rails_env, "production"
 set :deploy_via, :copy
 set :ssh_options, {:forward_agent => true, :port => 22}
@@ -31,7 +32,7 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/production_database.yml"), "#{shared_path}/config/database.yml"
+    put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
     puts "Теперь вы можете отредактировать файлы в  #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
