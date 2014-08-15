@@ -1,16 +1,17 @@
+# настройка по руководству - http://istickz.ru/deploy-rails-app/
 require "rvm/capistrano"
 require "bundler/capistrano"
 
-before 'deploy:setup', 'rvm:install_rvm'
+
 set :application, "landing"
 set :shared_children, shared_children
 set :repository, "git@github.com:vened/landing.git"
-set :deploy_to, "/var/www/landing"
+set :deploy_to, "/home/max/www/landing"
 set :scm, :git
 set :branch, "master"
 set :user, "max"
 set :group, "staff"
-set :use_sudo, true
+set :use_sudo, false
 set :rails_env, "production"
 set :deploy_via, :copy
 set :ssh_options, {:forward_agent => true, :port => 22}
